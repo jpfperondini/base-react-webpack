@@ -1,0 +1,17 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base/legacy"],
+    "rules": {
+        "semi": 0,
+        "class-methods-use-this": 0
+    },
+    "globals": {
+        "React": false,
+        "document": false,
+        "it": false,
+        "describe": false
+    }
+}

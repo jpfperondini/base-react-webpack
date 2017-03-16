@@ -11,12 +11,17 @@ class App extends React.Component {
     this.props.dispatch(addProduct(new Product(1, 'Product 1')))
     this.props.dispatch(addProduct(new Product(2, 'Product 2')))
   }
-  render () {
+  render() {
     return <div>
       <h1> My Page </h1>
       {this.props.children}
     </div>
   }
+}
+
+App.propTypes = {
+  dispatch: React.PropTypes.func,
+  children: React.PropTypes.node
 }
 
 export default connect(null, mapDispatchToProps)(App)

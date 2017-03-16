@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 import { hashHistory as history, Router } from 'react-router'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'

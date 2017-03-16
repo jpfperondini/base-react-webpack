@@ -33,5 +33,5 @@ module.exports = {
         loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
       }
     ]
-  },
+  }
 };
