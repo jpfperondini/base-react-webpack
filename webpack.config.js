@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.jsx',
+  entry: './src/main.js',
   output: {
     path: './dist',
     filename: 'bundle.js'
