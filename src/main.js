@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
+import { hashHistory as history, Router } from 'react-router'
+import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import { render } from 'react-dom'
-import { hashHistory } from 'react-router'
+
 import reducer from './reducers'
-import Root from './containers/Root'
+import routes from './routes'
 
 const store = createStore(reducer)
 
 render(
-  <Root store={store} history={hashHistory} />,
+  <Provider store={store}>
+    <Router history={history} routes={routes} />
+  </Provider>,
   document.getElementById('app')
 )

@@ -1,22 +1,17 @@
 import { connect } from 'react-redux'
+import ProductList from '../components/ProductList'
 
 const mapStateToProps = (state) => ({
   products: state.products
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  dispatch: dispatch
-})
-
 class Products extends React.Component {
-  componentWillMount() {
-    this.props.dispatch({type: 'ADD_PRODUCT', id: 1, text: 'Gabriel'})
-    this.props.dispatch({type: 'ADD_PRODUCT', id: 2, text: 'Mari'})
-  }
   render () {
-    console.log('render -> ', this.props.products)
-    return <h1> Products </h1>
+    return <div>
+      <h1> Products </h1>
+      <ProductList products={ this.props.products }/>
+    </div>
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Products)
+export default connect(mapStateToProps)(Products)
