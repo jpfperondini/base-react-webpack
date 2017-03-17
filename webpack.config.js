@@ -10,7 +10,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      React: 'react'
+      React: 'react',
+      _: 'lodash'
     }),
     new CopyWebpackPlugin([{ from: 'index.html' }])
   ],

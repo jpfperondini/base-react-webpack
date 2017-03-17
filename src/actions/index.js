@@ -1,4 +1,4 @@
-export const addProduct = product => ({
-  type: 'ADD_PRODUCT',
-  product: product
+export const addPost = post => ({
+  type: 'ADD_POST',
+  post: post
 })

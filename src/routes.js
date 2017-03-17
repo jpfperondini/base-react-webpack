@@ -3,11 +3,11 @@ import { Route, IndexRoute } from 'react-router'
 
 import App from './containers/App'
 import Home from './containers/Home'
-import Products from './containers/Products'
+import Posts from './containers/Posts'
 
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
-    <Route path="/products" component={Products} />
+    <Route path="/posts" component={Posts} />
   </Route>
 )
