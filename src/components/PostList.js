@@ -4,13 +4,11 @@ const mapStateToProps = (state) => ({
   posts: state.posts
 })
 
-const renderList = posts => posts.map(post =>
-    <div key={_.uniqueId('post_')}>{ post.text }</div>
-)
-
 class PostList extends React.Component {
   render() {
-    return <div>{ renderList(this.props.posts) }</div>
+    return <div>{this.props.posts.map(post =>
+      <div key={_.uniqueId('post_')}>{ post.text }</div>
+    )}</div>
   }
 }
 

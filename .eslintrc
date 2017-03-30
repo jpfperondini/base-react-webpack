@@ -1,8 +1,6 @@
 {
     "parser": "babel-eslint",
-    "plugins": [
-        "react"
-    ],
+    "plugins": ["react"],
     "extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base/legacy"],
     "rules": {
         "semi": 0,
@@ -12,7 +10,8 @@
         "React": false,
         "document": false,
         "_": false,
-        "it": false,
-        "describe": false
+        "test": false,
+        "expect": false,
+        "beforeEach": false
     }
 }
